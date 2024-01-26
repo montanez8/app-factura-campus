@@ -1,0 +1,14 @@
+/home/carlos/Documentos/curso de java/Proyectos/app-factura-campus-life/src/main/java/com/campusland/exceptiones/clienteexceptions/ClienteNullException.java
+/home/carlos/Documentos/curso de java/Proyectos/app-factura-campus-life/src/main/java/com/campusland/respository/models/ItemFactura.java
+/home/carlos/Documentos/curso de java/Proyectos/app-factura-campus-life/src/main/java/com/campusland/utils/ConexionBDList.java
+/home/carlos/Documentos/curso de java/Proyectos/app-factura-campus-life/src/main/java/com/campusland/services/ServiceCliente.java
+/home/carlos/Documentos/curso de java/Proyectos/app-factura-campus-life/src/main/java/com/campusland/respository/models/Factura.java
+/home/carlos/Documentos/curso de java/Proyectos/app-factura-campus-life/src/main/java/com/campusland/respository/impl/CrudReposotoryClienteImp.java
+/home/carlos/Documentos/curso de java/Proyectos/app-factura-campus-life/src/main/java/com/campusland/utils/Formato.java
+/home/carlos/Documentos/curso de java/Proyectos/app-factura-campus-life/src/main/java/com/campusland/views/ViewCliente.java
+/home/carlos/Documentos/curso de java/Proyectos/app-factura-campus-life/src/main/java/com/campusland/respository/CrudRepositoryCliente.java
+/home/carlos/Documentos/curso de java/Proyectos/app-factura-campus-life/src/main/java/com/campusland/views/ViewMain.java
+/home/carlos/Documentos/curso de java/Proyectos/app-factura-campus-life/src/main/java/com/campusland/services/impl/ServiceClienteImpl.java
+/home/carlos/Documentos/curso de java/Proyectos/app-factura-campus-life/src/main/java/com/campusland/exceptiones/clienteexceptions/ClienteException.java
+/home/carlos/Documentos/curso de java/Proyectos/app-factura-campus-life/src/main/java/com/campusland/respository/models/Cliente.java
+/home/carlos/Documentos/curso de java/Proyectos/app-factura-campus-life/src/main/java/com/campusland/respository/models/Producto.java
