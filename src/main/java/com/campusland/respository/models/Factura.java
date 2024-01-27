@@ -37,19 +37,22 @@ public class Factura {
     }
 
     public void display() {
-        System.out.println();
-        System.out.println("Factura: " + this.numeroFactura);
-        System.out.println("Cliente: " + this.cliente.getFullName());
-        System.out.println("Fecha: " + Formato.formatoFechaHora(this.getFecha()));
-        System.out.println("-----------Detalle Factura----------------------");
+        StringBuilder sb = new StringBuilder();
+        sb.append("\n");
+        sb.append("Factura: ").append(this.numeroFactura).append("\n");
+        sb.append("Cliente: ").append(this.cliente.getFullName()).append("\n");
+        sb.append("Fecha: ").append(Formato.formatoFechaHora(this.getFecha())).append("\n");
+        sb.append("-----------Detalle Factura----------------------").append("\n");
         for (ItemFactura item : this.items) {
-            System.out.println(item.getProducto().getCodigoNombre() + " " + item.getCantidad() + " "
-                    + Formato.formatoMonedaPesos(item.getImporte()));
+            sb.append("Producto: ").append(item.getProducto().getCodigoNombre()).append("\n");
+            sb.append("Cantidad: ").append(item.getCantidad()).append("\n");
+            sb.append("Precio: ").append(Formato.formatoMonedaPesos(item.getImporte())).append("\n");
+            sb.append("\n");
 
         }
-        System.out.println();
-        System.out.println("Total                        " + Formato.formatoMonedaPesos(this.getTotalFactura()));
-        System.out.println();
+        sb.append("Total: ").append(Formato.formatoMonedaPesos(this.getTotalFactura())).append("\n");
+        sb.append("\n");
+        System.out.println(sb.toString());
     }
 
 }

@@ -23,7 +23,6 @@ public class ViewFactura extends ViewMain {
     }
 
     private static void crearFactura() throws ClienteNullException, ProductoNullException {
-        listarClientes();
         Cliente cliente = getCliente();
         if (cliente != null) {
             Factura factura = new Factura(LocalDateTime.now(), cliente);
@@ -37,6 +36,7 @@ public class ViewFactura extends ViewMain {
     }
 
     private static Cliente getCliente() throws ClienteNullException {
+        listarClientes();
         System.out.println("Ingrese el codigo del cliente");
         Cliente cliente = serviceCliente.porDocumento(leer.next());
         if (cliente == null)
