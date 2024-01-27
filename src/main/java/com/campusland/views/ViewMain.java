@@ -4,20 +4,22 @@ import java.util.Scanner;
 
 import com.campusland.exceptiones.clienteexceptions.ClienteNullException;
 import com.campusland.exceptiones.productoeexeptions.ProductoNullException;
-import com.campusland.respository.CrudRepositoryFactura;
 import com.campusland.respository.impl.CrudRepositoryFacturaImp;
 import com.campusland.respository.impl.CrudRepositoryProductoImp;
-import com.campusland.respository.impl.CrudReposotoryClienteImp;
+import com.campusland.respository.impl.impcliente.CrudRepositoryClienteJsonImp;
+import com.campusland.respository.impl.impcliente.CrudRepositoryMysqlImp;
+import com.campusland.respository.impl.impcliente.CrudReposotoryClienteImp;
 import com.campusland.services.ServiceCliente;
 import com.campusland.services.ServiceFactura;
 import com.campusland.services.ServiceProducto;
-import com.campusland.services.impl.ServiceClienteImpl;
-import com.campusland.services.impl.ServiceFacturaImp;
-import com.campusland.services.impl.ServiceProductoImp;
+import com.campusland.services.impl.*;
+
 
 public class ViewMain {
 
-    public static final ServiceCliente serviceCliente = new ServiceClienteImpl(new CrudReposotoryClienteImp());
+  //  public static final ServiceCliente serviceCliente = new ServiceClienteImpl(new CrudReposotoryClienteImp());
+  //  public static final ServiceCliente serviceCliente = new ServiceClienteImpl(new CrudRepositoryClienteJsonImp());
+    public static final ServiceCliente serviceCliente = new ServiceClienteImpl(new CrudRepositoryMysqlImp());
     public static final ServiceProducto serviceProducto = new ServiceProductoImp(new CrudRepositoryProductoImp());
     public static final ServiceFactura serviceFactura = new ServiceFacturaImp(new CrudRepositoryFacturaImp());
     public static  Scanner leer = new Scanner(System.in);
@@ -55,11 +57,5 @@ public class ViewMain {
         System.out.println("3. Modulo de Factura");
         System.out.println("4. Salir:");
         return leer.nextInt();
-    }
-
-    private static void listarProductos() {
-        System.out.println("Listado de productos");
-        System.out.println();
-        serviceProducto.listar().forEach(producto -> producto.imprimir());
     }
 }

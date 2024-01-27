@@ -2,7 +2,7 @@ package com.campusland.respository.impl;
 
 import com.campusland.respository.CrudRepositoryProducto;
 import com.campusland.respository.models.Producto;
-import com.campusland.utils.ConexionBDList;
+import com.campusland.utils.conexiones.conexionbdlist.ConexionBDList;
 
 import java.util.List;
 

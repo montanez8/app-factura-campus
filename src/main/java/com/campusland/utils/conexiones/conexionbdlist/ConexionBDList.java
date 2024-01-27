@@ -1,4 +1,4 @@
-package com.campusland.utils;
+package com.campusland.utils.conexiones.conexionbdlist;
 
 import com.campusland.respository.models.Cliente;
 import com.campusland.respository.models.Factura;

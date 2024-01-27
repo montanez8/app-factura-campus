@@ -11,12 +11,12 @@ public class ServiceClienteImpl  implements ServiceCliente {
     private final CrudRepositoryCliente crudRepositoryCliente;
 
     public ServiceClienteImpl(CrudRepositoryCliente crudRepositoryCliente){
-         this.crudRepositoryCliente=crudRepositoryCliente;
+        this.crudRepositoryCliente=crudRepositoryCliente;
     }
 
     @Override
     public List<Cliente> listar() {
-        return this.crudRepositoryCliente.listar();        
+        return this.crudRepositoryCliente.listar();
     }
 
     @Override
@@ -26,26 +26,25 @@ public class ServiceClienteImpl  implements ServiceCliente {
             return cliente;
         }else{
             throw new ClienteNullException("No se encontro cliente por id");
-        }  
-      
+        }
+
     }
 
     @Override
     public void crear(Cliente cliente) {
-         this.crudRepositoryCliente.crear(cliente);
-       
+        this.crudRepositoryCliente.crear(cliente);
+
     }
 
     @Override
     public void editar(Cliente cliente) {
         this.crudRepositoryCliente.editar(cliente);
-        
+
     }
 
     @Override
-    public void eliminar(String id) {
-       this.crudRepositoryCliente.eliminar(id); 
-        
+    public void eliminar(Cliente cliente) {
+        this.crudRepositoryCliente.eliminar(cliente);
+
     }
-    
 }

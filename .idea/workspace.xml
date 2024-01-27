@@ -5,38 +5,75 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5703dcb6-94e7-4cbc-8e5f-af22828ba55d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/campusland/exceptiones/productoeexeptions/ProductoException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/campusland/exceptiones/productoeexeptions/ProductoNullException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/campusland/respository/CrudRepositoryFactura.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/campusland/respository/CrudRepositoryProducto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/campusland/respository/impl/CrudRepositoryFacturaImp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/campusland/respository/impl/CrudRepositoryProductoImp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/campusland/services/ServiceFactura.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/campusland/services/ServiceProducto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/campusland/services/impl/ServiceFacturaImp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/campusland/services/impl/ServiceProductoImp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/campusland/views/ViewFactura.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/campusland/views/ViewProducto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/clientes.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/configuracion.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/campusland/respository/impl/impcliente/CrudRepositoryClienteJsonImp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/campusland/respository/impl/impcliente/CrudRepositoryMysqlImp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/campusland/utils/Configuracion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/campusland/utils/conexiones/conexionbdjson/ConexionBDJson.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/campusland/utils/conexiones/conexionbdmysql/ConexionBDMysql.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vscode/settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/.vscode/settings.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/campusland/exceptiones/clienteexceptions/ClienteException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/campusland/exceptiones/clienteexceptions/ClienteException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/campusland/exceptiones/clienteexceptions/ClienteNullException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/campusland/exceptiones/clienteexceptions/ClienteNullException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/campusland/exceptiones/productoeexeptions/ProductoException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/campusland/exceptiones/productoeexeptions/ProductoException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/campusland/exceptiones/productoeexeptions/ProductoNullException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/campusland/exceptiones/productoeexeptions/ProductoNullException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/campusland/respository/CrudRepositoryCliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/campusland/respository/CrudRepositoryCliente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/campusland/respository/CrudRepositoryFactura.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/campusland/respository/CrudRepositoryFactura.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/campusland/respository/CrudRepositoryProducto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/campusland/respository/CrudRepositoryProducto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/campusland/respository/impl/CrudRepositoryFacturaImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/campusland/respository/impl/CrudRepositoryFacturaImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/campusland/respository/impl/CrudRepositoryProductoImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/campusland/respository/impl/CrudRepositoryProductoImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/campusland/respository/impl/CrudReposotoryClienteImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/campusland/respository/impl/impcliente/CrudReposotoryClienteImp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/campusland/respository/models/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/campusland/respository/models/Cliente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/campusland/respository/models/Factura.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/campusland/respository/models/Factura.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/campusland/respository/models/ItemFactura.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/campusland/respository/models/ItemFactura.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/campusland/respository/models/Producto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/campusland/respository/models/Producto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/campusland/services/ServiceCliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/campusland/services/ServiceCliente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/campusland/services/ServiceFactura.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/campusland/services/ServiceFactura.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/campusland/services/ServiceProducto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/campusland/services/ServiceProducto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/campusland/services/impl/ServiceClienteImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/campusland/services/impl/ServiceClienteImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/campusland/utils/ConexionBDList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/campusland/utils/ConexionBDList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/campusland/services/impl/ServiceFacturaImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/campusland/services/impl/ServiceFacturaImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/campusland/services/impl/ServiceProductoImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/campusland/services/impl/ServiceProductoImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/campusland/utils/ConexionBDList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/campusland/utils/conexiones/conexionbdlist/ConexionBDList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/campusland/utils/Formato.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/campusland/utils/Formato.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/campusland/views/ViewCliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/campusland/views/ViewCliente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/campusland/views/ViewFactura.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/campusland/views/ViewFactura.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/campusland/views/ViewMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/campusland/views/ViewMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/campusland/views/ViewProducto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/campusland/views/ViewProducto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/campusland/exceptiones/clienteexceptions/ClienteException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/campusland/exceptiones/clienteexceptions/ClienteException.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/campusland/exceptiones/clienteexceptions/ClienteNullException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/campusland/exceptiones/clienteexceptions/ClienteNullException.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/campusland/respository/impl/CrudReposotoryClienteImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/campusland/respository/impl/CrudReposotoryClienteImp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/campusland/exceptiones/productoeexeptions/ProductoException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/campusland/exceptiones/productoeexeptions/ProductoException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/campusland/exceptiones/productoeexeptions/ProductoNullException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/campusland/exceptiones/productoeexeptions/ProductoNullException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/campusland/respository/CrudRepositoryCliente.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/campusland/respository/CrudRepositoryCliente.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/campusland/respository/impl/CrudRepositoryFacturaImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/campusland/respository/impl/CrudRepositoryFacturaImp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/campusland/respository/impl/CrudRepositoryProductoImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/campusland/respository/impl/CrudRepositoryProductoImp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/campusland/respository/impl/CrudReposotoryClienteImp.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/campusland/respository/models/Cliente.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/campusland/respository/models/Cliente.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/campusland/respository/models/Factura.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/campusland/respository/models/Factura.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/campusland/respository/models/ItemFactura.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/campusland/respository/models/ItemFactura.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/campusland/respository/models/Producto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/campusland/respository/models/Producto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/campusland/services/ServiceCliente.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/campusland/services/ServiceCliente.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/campusland/services/impl/ServiceClienteImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/campusland/services/impl/ServiceClienteImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/campusland/utils/ConexionBDList.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/campusland/utils/ConexionBDList.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/campusland/services/impl/ServiceFacturaImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/campusland/services/impl/ServiceFacturaImp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/campusland/services/impl/ServiceProductoImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/campusland/services/impl/ServiceProductoImp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/campusland/utils/ConexionBDList.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/campusland/utils/Formato.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/campusland/utils/Formato.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/campusland/views/ViewCliente.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/campusland/views/ViewCliente.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/campusland/views/ViewFactura.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/campusland/views/ViewFactura.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/campusland/views/ViewMain.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/campusland/views/ViewMain.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/campusland/views/ViewProducto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/campusland/views/ViewProducto.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/factura-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/factura-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +108,9 @@
     &quot;Maven.factura [install].executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;extract.method.default.visibility&quot;: &quot;private&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;/home/carlos/Documentos/curso de java/Proyectos/hilos&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
@@ -82,7 +121,13 @@
     &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mariadb&quot;
+    ]
   }
 }</component>
   <component name="RecentsManager">
@@ -142,9 +187,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="jdk-17.0.9-corretto-17.0.9-f644763e9732-220112af" />
-        <option value="jdk-17.0.9-jbr-17.0.9-f644763e9732-eddbeb58" />
-        <option value="jdk-21.0.1-openjdk-21.0.1-f644763e9732-76dd8dae" />
+        <option value="jdk-17.0.9-jbr-17.0.9-4caba194b151-5240e4f5" />
       </set>
     </attachedChunks>
   </component>
@@ -163,6 +206,10 @@
       <workItem from="1706052091724" duration="4000000" />
       <workItem from="1706226284551" duration="9094000" />
       <workItem from="1706239326794" duration="795000" />
+      <workItem from="1706571722938" duration="3657000" />
+      <workItem from="1706614678671" duration="2110000" />
+      <workItem from="1706617494997" duration="9487000" />
+      <workItem from="1706627351017" duration="7888000" />
     </task>
     <servers />
   </component>

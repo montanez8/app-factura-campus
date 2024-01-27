@@ -6,11 +6,8 @@ import com.campusland.respository.models.Cliente;
 public class ViewCliente extends ViewMain {
 
     public static void startMenu() {
-
-        int op = 0;
-
+        int op;
         do {
-
             op = mostrarMenu();
             switch (op) {
                 case 1:
@@ -32,23 +29,13 @@ public class ViewCliente extends ViewMain {
                     System.out.println("Opcion no valida");
                     break;
             }
-
         } while (op >= 1 && op < 6);
-
     }
 
     public static void buscarCliente() {
-        System.out.println("Busqueda de cliente ");
-        leer.nextLine();
-        System.out.print("Documento: ");
-        String documento = leer.nextLine();
-
-        try {
-            Cliente cliente = serviceCliente.porDocumento(documento);
-            System.out.println();
+        Cliente cliente = buscarGetCliente();
+        if (cliente != null) {
             cliente.imprimir();
-        } catch (ClienteNullException e) {
-            System.out.println(e.getMessage());
         }
     }
 
@@ -84,79 +71,49 @@ public class ViewCliente extends ViewMain {
         String documento = leer.nextLine();
         Cliente cliente = new Cliente(nombre, apellido, email, celular, direccion, documento);
         serviceCliente.crear(cliente);
-
     }
 
     public static void listarClientes() {
-        System.out.println("Lista de Clientes");
         for (Cliente cliente : serviceCliente.listar()) {
             cliente.imprimir();
-            System.out.println();
         }
     }
 
     public static void modificarCliente() {
+    Cliente clienteActual = buscarGetCliente();
+    if (clienteActual != null) {
+        System.out.println();
+        clienteActual.imprimir();
 
-        Cliente clienteActual = buscarGetCliente();
+        String nuevoNombre = obtener("nombre", clienteActual.getNombre());
+        clienteActual.setNombre(nuevoNombre);
 
-        if (clienteActual != null) {
-            System.out.println();
-            clienteActual.imprimir();
+        String nuevoApellido = obtener("apellido", clienteActual.getApellido());
+        clienteActual.setApellido(nuevoApellido);
 
-            System.out.println("Modificar nombre: si o no? ");
-            String opcion = leer.nextLine();
-            if (opcion.equalsIgnoreCase("si")) {
-                System.out.println("Nombre: ");
-                String nuevoNombre = leer.nextLine();
-                clienteActual.setNombre(nuevoNombre);
-            }
-            System.out.println("Modificar apellido: si o no? ");
-            opcion = leer.nextLine();
+        String nuevoEmail = obtener("email", clienteActual.getEmail());
+        clienteActual.setEmail(nuevoEmail);
 
-            if (opcion.equalsIgnoreCase("si")) {
-                System.out.println("Apellido: ");
-                String nuevoApellido = leer.nextLine();
-                clienteActual.setApellido(nuevoApellido);
-            }
-            System.out.println("Modificar email: si o no? ");
-            opcion = leer.nextLine();
+        String nuevoCelular = obtener("celular", clienteActual.getCelular());
+        clienteActual.setCelular(nuevoCelular);
 
-            if (opcion.equalsIgnoreCase("si")) {
-                System.out.println("Email: ");
-                String nuevoEmail = leer.nextLine();
-                clienteActual.setEmail(nuevoEmail);
-            }
-            System.out.println("Modificar celular: si o no? ");
-            opcion = leer.nextLine();
+        String nuevoDireccion = obtener("direccion", clienteActual.getDireccion());
+        clienteActual.setDireccion(nuevoDireccion);
 
-            if (opcion.equalsIgnoreCase("si")) {
-                System.out.println("Celular: ");
-                String nuevoCelular = leer.nextLine();
-                clienteActual.setCelular(nuevoCelular);
-            }
-            System.out.println("Modificar direccion: si o no? ");
-            opcion = leer.nextLine();
-
-            if (opcion.equalsIgnoreCase("si")) {
-                System.out.println("Direccion: ");
-                String nuevoDireccion = leer.nextLine();
-                clienteActual.setDireccion(nuevoDireccion);
-            }
-            serviceCliente.editar(clienteActual);
-
-        }
-
+        serviceCliente.editar(clienteActual);
     }
+}
 
     public static void eliminarCliente() {
-        Cliente cliente = buscarGetCliente();
-        if (cliente != null) {
-            serviceCliente.eliminar(cliente.getDocumento());
-            System.out.println("Elmininado el cliente con exito");
-        } else {
-            System.out.println("Se presentó un problema y no se puedo eliminar el cliente");
+        Cliente clienteActual = buscarGetCliente();
+        if (clienteActual != null) {
+            clienteActual.imprimir();
+            System.out.println("Eliminar cliente: si o no? ");
+            String opcion = leer.nextLine();
+            if (opcion.equalsIgnoreCase("si")) {
+                serviceCliente.eliminar(clienteActual);
+            }
         }
-
     }
 
     public static int mostrarMenu() {
@@ -170,4 +127,13 @@ public class ViewCliente extends ViewMain {
         return leer.nextInt();
     }
 
+    private static String obtener(String campo, String valor) {
+    System.out.println("Modificar " + campo + ": si o no? ");
+    String opcion = leer.nextLine();
+    if (opcion.equalsIgnoreCase("si")) {
+        System.out.println(campo + ": ");
+        return leer.nextLine();
+    }
+    return valor;
+}
 }

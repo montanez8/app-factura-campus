@@ -1,10 +1,12 @@
-package com.campusland.respository.impl;
+package com.campusland.respository.impl.impcliente;
 
 import java.util.List;
 
 import com.campusland.respository.CrudRepositoryCliente;
 import com.campusland.respository.models.Cliente;
-import com.campusland.utils.ConexionBDList;
+import com.campusland.utils.conexiones.conexionbdlist.ConexionBDList;
+
+import static com.campusland.respository.impl.impcliente.CrudRepositoryClienteJsonImp.asiganar;
 
 public class CrudReposotoryClienteImp implements CrudRepositoryCliente {
 
@@ -36,27 +38,21 @@ public class CrudReposotoryClienteImp implements CrudRepositoryCliente {
     @Override
     public void editar(Cliente cliente) {
         for (Cliente clienteCurrent : conexion.getListaClientes()) {
-            if (clienteCurrent.getDocumento().equals(cliente.getDocumento())) {
-                clienteCurrent.setNombre(cliente.getNombre());
-                clienteCurrent.setApellido(cliente.getApellido());
-                clienteCurrent.setDireccion(cliente.getDireccion());
-                clienteCurrent.setEmail(cliente.getEmail());
-                clienteCurrent.setCelular(cliente.getCelular());
-                break;
-            }
+            if (asiganar(cliente, clienteCurrent)) break;
         }
+
     }
 
     @Override
-    public void eliminar(String id) {
-        for (Cliente cliente : conexion.getListaClientes()) {
-            if (cliente.getDocumento().equals(id)) {
-                conexion.getListaClientes().remove(cliente);
+    public void eliminar(Cliente cliente) {
+        for (Cliente clienteCurrent : conexion.getListaClientes()) {
+            if (clienteCurrent.getDocumento().equals(cliente.getDocumento())) {
+                conexion.getListaClientes().remove(clienteCurrent);
                 break;
             }
-
         }
 
     }
+
 
 }
